@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campus Fest Pass Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>Campus Fest Pass Booking</h2>
+
+  <input type="text" id="name" placeholder="Student Name">
+
+  <select id="event">
+    <option value="">Select Event</option>
+    <option>DJ Night</option>
+    <option>Tech Expo</option>
+    <option>Culturals</option>
+    <option>Food Fest</option>
+  </select>
+
+  <label>Pass Type</label><br>
+  <input type="radio" name="pass" value="Regular"> Regular
+  <input type="radio" name="pass" value="VIP"> VIP
+  <br><br>
+
+  <label>Food Preference</label><br>
+  <input type="checkbox" value="Veg" class="food"> Veg
+  <input type="checkbox" value="Non-Veg" class="food"> Non-Veg
+  <input type="checkbox" value="Snacks" class="food"> Snacks
+  <br><br>
+
+  <button onclick="bookPass()">Book Pass</button>
+  <button onclick="resetForm()">Reset</button>
+
+  <div id="output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
