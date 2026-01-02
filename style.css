@@ -1,9 +1,9 @@
 body {
-  background: linear-gradient(120deg, #2193b0, #6dd5ed);
+  background: linear-gradient(120deg, 2193b0, 6dd5ed);
   font-family: Arial;
 }
 
-.card {
+card {
   background: white;
   width: 320px;
   margin: 60px auto;
@@ -18,13 +18,13 @@ input, select, button {
 }
 
 button {
-  background: #0b5ed7;
+  background: 0b5ed7;
   color: white;
   border: none;
   border-radius: 5px;
 }
 
-#output {
+output {
   margin-top: 15px;
   font-weight: bold;
 }
