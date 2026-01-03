@@ -8,7 +8,7 @@ function bookPass() {
   foods.forEach(f => foodList.push(f.value));
 
   if (!name || !event || !pass) {
-    alert("Ella details-um fill pannu da!");
+    alert("Please fill in all the required details.");
     return;
   }
 
