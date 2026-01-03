@@ -12,12 +12,13 @@ function bookPass() {
     return;
   }
 
-  document.getElementById("output").innerHTML =
-    ` Pass Booked! <br>
-     Name: ${name}<br>
-     Event: ${event}<br>
-     Pass: ${pass.value}<br>
-     Food: ${foodList.join(", ")}`;
+  document.getElementById("output").innerHTML = `
+     <b>Booking Successful</b><br><br>
+    Name: ${name}<br>
+    Event: ${event}<br>
+    Pass Type: ${pass.value}<br>
+    Food: ${foodList.join(", ") || "None"}
+  `;
 }
 
 function resetForm() {
