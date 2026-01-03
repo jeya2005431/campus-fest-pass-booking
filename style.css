@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, 0f2027, 203a43, 2c5364);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
   min-height: 100vh;
 }
@@ -30,19 +30,19 @@ input, select, button {
 }
 
 input, select {
-  background: 1e1e1e;
+  background: #1e1e1e;
   color: white;
 }
 
 button {
-  background: 00c6ff;
+  background: #00c6ff;
   color: black;
   font-weight: bold;
   cursor: pointer;
 }
 
 button:hover {
-  background: 00a3cc;
+  background: #00a3cc;
 }
 
 .options {
@@ -52,6 +52,6 @@ button:hover {
 output {
   margin-top: 15px;
   padding: 10px;
-  background: 111;
+  background: #111;
   border-radius: 6px;
 }
