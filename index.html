@@ -19,18 +19,20 @@
     <option>Food Fest</option>
   </select>
 
-  <label>Pass Type</label><br>
-  <input type="radio" name="pass" value="Regular"> Regular
-  <input type="radio" name="pass" value="VIP"> VIP
-  <br><br>
+  <div class="options">
+    <label>Pass Type</label><br>
+    <input type="radio" name="pass" value="Regular"> Regular
+    <input type="radio" name="pass" value="VIP"> VIP
+  </div>
 
-  <label>Food Preference</label><br>
-  <input type="checkbox" value="Veg" class="food"> Veg
-  <input type="checkbox" value="Non-Veg" class="food"> Non-Veg
-  <input type="checkbox" value="Snacks" class="food"> Snacks
-  <br><br>
+  <div class="options">
+    <label>Food Preference</label><br>
+    <input type="checkbox" class="food" value="Veg"> Veg
+    <input type="checkbox" class="food" value="Non-Veg"> Non-Veg
+    <input type="checkbox" class="food" value="Snacks"> Snacks
+  </div>
 
-  <button onclick="bookPass()">Book Pass</button>
+  <button onclick="bookPass()">Proceed</button>
   <button onclick="resetForm()">Reset</button>
 
   <div id="output"></div>
