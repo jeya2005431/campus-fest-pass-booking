@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Campus Fest Pass Booking</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Campus Fest Pass Booking</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="card">
-  <span class="pass-badge">CAMPUS FEST</span>
+<span class="pass-badge">CAMPUS FEST</span>
 
-  <h2>Fest Pass Booking</h2>
+<h2>Fest Pass Booking</h2>
 
-  <input type="text" id="name" placeholder="Student Name">
+<input type="text" id="name" placeholder="Student Name">
 
-  <select id="event">
-    <option value="">Select Event</option>
-    <option>DJ Night</option>
-    <option>Tech Expo</option>
-    <option>Culturals</option>
-    <option>Food Fest</option>
-  </select>
+<select id="event">
+<option value="">Select Event</option>
+<option>DJ Night</option>
+<option>Tech Expo</option>
+<option>Culturals</option>
+<option>Food Fest</option>
+</select>
 
-  <div class="options">
-    <label>Pass Type</label>
-    <div class="radio-group">
-      <label><input type="radio" name="pass" value="Regular"> Regular</label>
-      <label><input type="radio" name="pass" value="VIP"> VIP</label>
-    </div>
-  </div>
+<div class="options">
+<label>Pass Type</label>
+<div class="radio-group">
+<label><input type="radio" name="pass" value="Regular"> Regular</label>
+<label><input type="radio" name="pass" value="VIP"> VIP</label>
+</div>
+</div>
 
-  <div class="options">
-    <label>Food Preference</label>
-    <div class="check-group">
-      <label><input type="checkbox" class="food" value="Veg"> Veg</label>
-      <label><input type="checkbox" class="food" value="Non-Veg"> Non-Veg</label>
-      <label><input type="checkbox" class="food" value="Snacks"> Snacks</label>
-    </div>
-  </div>
+<div class="options">
+<label>Food Preference</label>
+<div class="check-group">
+<label><input type="checkbox" class="food" value="Veg"> Veg</label>
+<label><input type="checkbox" class="food" value="Non-Veg"> Non-Veg</label>
+<label><input type="checkbox" class="food" value="Snacks"> Snacks</label>
+</div>
+</div>
 
-  <button onclick="bookPass()">Generate Pass</button>
-  <button class="reset" onclick="resetForm()">Reset</button>
+<button onclick="bookPass()">Generate Pass</button>
+<button class="reset" onclick="resetForm()">Reset</button>
 
-  <div id="output"></div>
+<div id="output"></div>
 </div>
 
 <script src="script.js"></script>
