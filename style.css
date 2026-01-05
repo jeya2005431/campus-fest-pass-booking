@@ -1,67 +1,52 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
   min-height: 100vh;
-  background: linear-gradient(135deg,
-    #ff512f,
-    #dd2476,
-    #1fa2ff,
-    #12d8fa,
-    #a6ffcb
-  );
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#ff512f,#dd2476,#1fa2ff,#12d8fa,#a6ffcb);
   background-size: 400% 400%;
   animation: gradientBG 12s ease infinite;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: white;
 }
 
-/* Animated background */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Pass Card */
 .card {
-  width: 350px;
+  width: 360px;
   padding: 25px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow:
-    0 0 20px rgba(0,0,0,0.4),
-    0 0 30px rgba(255, 0, 150, 0.4);
-  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
   position: relative;
   overflow: hidden;
 }
 
-/* Neon border animation */
+/* 🔥 FIXED NEON BORDER */
 .card::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 18px;
   padding: 2px;
-  background: linear-gradient(45deg, #00f2fe, #ff00cc, #00ff99);
+  background: linear-gradient(45deg,#00f2fe,#ff00cc,#00ff99);
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   animation: neonMove 4s linear infinite;
+  pointer-events: none; /* 🔥 MAIN FIX */
 }
 
 @keyframes neonMove {
@@ -69,18 +54,32 @@ body {
   100% { filter: hue-rotate(360deg); }
 }
 
-/* Title */
+/* Content always clickable */
+.card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.pass-badge {
+  position: absolute;
+  top: 12px;
+  right: -35px;
+  background: linear-gradient(to right,#ffe259,#ffa751);
+  padding: 6px 40px;
+  transform: rotate(45deg);
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+}
+
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  background: linear-gradient(to right, #ffe259, #ffa751);
+  background: linear-gradient(to right,#00f2fe,#4facfe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Inputs */
 input, select {
   width: 100%;
   margin: 8px 0;
@@ -89,60 +88,36 @@ input, select {
   border: none;
   background: rgba(0,0,0,0.6);
   color: white;
-  outline: none;
-  transition: 0.3s;
 }
 
-input::placeholder {
-  color: #ccc;
+.options { margin-top: 10px; }
+
+.radio-group, .check-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
 }
 
-input:focus, select:focus {
-  box-shadow: 0 0 10px #00f2fe;
-}
-
-/* Button */
 button {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 12px;
   padding: 12px;
   border-radius: 25px;
   border: none;
-  background: linear-gradient(to right, #00f2fe, #4facfe);
-  color: black;
-  font-weight: 700;
-  font-size: 15px;
+  background: linear-gradient(to right,#00f2fe,#4facfe);
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.4s;
 }
 
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00f2fe;
+button.reset {
+  background: linear-gradient(to right,#ff512f,#dd2476);
+  color: white;
 }
 
-/* Output / Pass Result */
-output {
-  display: block;
+#output {
   margin-top: 18px;
-  padding: 12px;
+  padding: 15px;
   background: rgba(0,0,0,0.7);
   border-radius: 12px;
-  text-align: center;
-  font-weight: 600;
-  color: #a6ffcb;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
-}
-
-/* Optional badge */
-.pass-badge {
-  position: absolute;
-  top: 12px;
-  right: -30px;
-  background: linear-gradient(to right, #ff512f, #f09819);
-  padding: 6px 40px;
-  transform: rotate(45deg);
-  font-size: 12px;
-  font-weight: 700;
-  color: black;
+  display: none;
 }
